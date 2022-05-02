@@ -1,7 +1,7 @@
 <?php
 /**
- * All linked files that are needed for the "header.php" are called in this funtion.
- * DO NOT place JS files here.
+ * All linked files that are needed for the "header.php"
+ * are called in this funtion.
  */
 function institute_files() {
 
@@ -13,6 +13,9 @@ function institute_files() {
   wp_enqueue_style('institute_main_styles', get_theme_file_uri('/build/style-index.css'));
   wp_enqueue_style('institute_extra_styles', get_theme_file_uri('/build/index.css'));
 
+  // Scripts
+  wp_enqueue_script('institute_extra_scripts', get_theme_file_uri('/build/index.js'), array('jquery') , '1.0', true);
+  wp_enqueue_script('hero-slider', get_theme_file_uri('/src/modules/HeroSlider.js'), array('jquery'), '1.0', true);
 }
 
 add_action('wp_enqueue_scripts', 'institute_files');
