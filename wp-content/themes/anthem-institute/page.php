@@ -31,6 +31,7 @@
       <?php }
     ?>
 
+    <!-- Gets the children of a parent and displays the side menu ONLY if there are child pages -->
     <?php
     $testArray = get_pages(array (
       'child_of' => get_the_id()
