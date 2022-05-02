@@ -22,6 +22,11 @@ add_action('wp_enqueue_scripts', 'institute_files');
 
 function institute_features() {
   add_theme_support('title-tag');
+
+  //Menu Locations
+  register_nav_menu('headerMenuLocation', 'Header Menu Location');
+  register_nav_menu('footerColumnTwo', 'Footer Column Two');
+  register_nav_menu('footerColumnThree', 'Footer Column Three');
 }
 
 add_action('after_setup_theme', 'institute_features');
