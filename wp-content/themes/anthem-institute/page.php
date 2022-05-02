@@ -17,7 +17,7 @@
 
     <div class="container container--narrow page-section">
 
-    <!-- Checks to see if there is a parent page. If True bread crumb will appear -->
+    <!-- Checks to see if there is a parent page. If True breadcrumb will appear -->
     <?php
 
       $theParent = wp_get_post_parent_id(get_the_ID());
