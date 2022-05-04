@@ -31,9 +31,15 @@ function institute_features() {
 
 add_action('after_setup_theme', 'institute_features');
 
-// This query sorts the events archive by date and displays
-// the order by date closest to today and removes past events.
 function institute_adjust_queries($query) {
+// 03/05/2022 - TAG: This query checks for the 'Program' post type and orders by alphabectically in the accending order on the program archive page
+  if (!is_admin() AND is_post_type_archive('program') AND is_main_query()) {
+    $query->set('orderby', 'title');
+    $query->set('order', 'ASC');
+    $query->set('post_per_page', -1);
+  }
+
+// 03/05/2022 - TAG: This query sorts the events archive by date and displays the order by date closest to today and removes past events.
   if (!is_admin() AND is_post_type_archive('event') AND $query->is_main_query()) {
     $today = date('Ymd');
     $query->set('meta_key', 'event_date');
