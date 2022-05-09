@@ -23,6 +23,9 @@ add_action('wp_enqueue_scripts', 'institute_files');
 function institute_features() {
   add_theme_support('title-tag');
   add_theme_support('post-thumbnails');
+  add_image_size('professorLandscape', 400, 260, true);
+  add_image_size('professorPortrait', 480, 650, true);
+  add_image_size('pageBanner', 1500, 300, true);
 
   //Menu Locations
   register_nav_menu('headerMenu', 'Header Menu');
