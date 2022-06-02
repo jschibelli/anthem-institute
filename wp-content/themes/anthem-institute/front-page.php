@@ -66,8 +66,7 @@
                   </div>
                 </div>
             <?php } wp_reset_postdata();
-          ?>
-
+          ?>clear
           <p class="t-center no-margin"><a href="<?php echo site_url('/blog'); ?>" class="btn btn--yellow">View All Blog Posts</a></p>
         </div>
       </div>
